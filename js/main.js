@@ -208,3 +208,32 @@ document.querySelectorAll('#extras .to-quote').forEach(btn=>{
     else{ document.getElementById('contact')?.scrollIntoView({behavior:'smooth'}); }
   });
 });
+// ...existing code...
+
+// Simple lightbox for gallery images
+const galleryGrid = document.getElementById('galleryGrid');
+if (galleryGrid) {
+  galleryGrid.addEventListener('click', function(e) {
+    const img = e.target.closest('img');
+    if (!img) return;
+    const src = img.getAttribute('data-src') || img.src;
+    const alt = img.alt || '';
+    // Create modal
+    const modal = document.createElement('div');
+    modal.className = 'modal open';
+    modal.innerHTML = `
+      <div class="modal__inner" style="background:#000;display:flex;align-items:center;justify-content:center;">
+        <img src="${src}" alt="${alt}" class="lightbox__img" style="max-width:90vw;max-height:90vh;object-fit:contain;">
+        <button class="close-x" aria-label="Close" style="position:absolute;top:20px;right:20px;">Close</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    modal.querySelector('.close-x').onclick = () => modal.remove();
+    modal.onclick = (ev) => { if (ev.target === modal) modal.remove(); };
+    document.addEventListener('keydown', function esc(e) {
+      if (e.key === 'Escape') { modal.remove(); document.removeEventListener('keydown', esc); }
+    });
+  });
+}
+
+// ...existing code...
