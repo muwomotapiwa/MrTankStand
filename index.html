@@ -2,428 +2,530 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mr Tank Stand — Tank & Stand Installation, Repairs, Delivery</title>
-  <meta name="description" content="Mr Tank Stand: Tank & stand installation, fabrication, repairs, and borehole hookups. Payment on delivery. Free delivery* in Harare and surrounding areas." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr Tank Stand — Tanks, Stands, Installation & Repairs</title>
+  <meta name="description" content="Water tank & stand installation, fabrication, repairs, and borehole hookups. Fast delivery and payment on delivery. Harare & surrounding areas." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Mr Tank Stand — Tank & Stand Installation, Repairs, Delivery">
-  <meta property="og:description" content="Payment on delivery. Free delivery* in Harare. Stands 3m–6m, tanks 1000L–5000L.">
+  <!-- Preload background + banner for faster first paint -->
+  <link rel="preload" as="image" href="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/7en/j0x/04b/MrTankStandackGround.png">
+  <link rel="preload" as="image" href="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/mf0/ihk/f66/MrTankStandHome.png">
+
+  <!-- LocalBusiness SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Mr Tank Stand",
+    "image":"https://af6815798a.imgdist.com/pub/bfra/knkjywkm/mf0/ihk/f66/MrTankStandHome.png",
+    "telephone":"+263774887686",
+    "areaServed":"ZW",
+    "sameAs":["https://facebook.com/mrtankstands","https://instagram.com/mrtankstand"],
+    "address":{"@type":"PostalAddress","addressCountry":"ZW"},
+    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"17:00"}]
+  }
+  </script>
+
+  <!-- Open Graph / Twitter (SEO candy) -->
+  <meta property="og:title" content="Mr Tank Stand — Tanks, Stands, Install & Repairs">
+  <meta property="og:description" content="Fast installs around Harare. Payment on delivery.">
   <meta property="og:image" content="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/mf0/ihk/f66/MrTankStandHome.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Performance -->
-  <link rel="preload" as="image" href="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/mf0/ihk/f66/MrTankStandHome.png">
+  <!-- FAQPage schema (SEO) -->
+  <script type="application/ld+json">
+  {
+   "@context":"https://schema.org",
+   "@type":"FAQPage",
+   "mainEntity":[
+    {"@type":"Question","name":"Do you charge for delivery?",
+     "acceptedAnswer":{"@type":"Answer","text":"Harare urban deliveries are free. Greater Harare and regional fees are shown in the estimator."}},
+    {"@type":"Question","name":"Do you custom-build stands?",
+     "acceptedAnswer":{"@type":"Answer","text":"Yes. Tell us your required height and base footprint — we’ll quote accordingly."}},
+    {"@type":"Question","name":"Do you handle pumps and plumbing?",
+     "acceptedAnswer":{"@type":"Answer","text":"Yes. Full borehole hookups, pumps, filters, taps — end to end."}}
+   ]
+  }
+  </script>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- (Optional) Packages as Product items -->
+  <script type="application/ld+json">
+  {
+   "@context":"https://schema.org",
+   "@type":"ItemList",
+   "itemListElement":[
+    {"@type":"Product","name":"2000L + 3m Stand","brand":"Mr Tank Stand","offers":{"@type":"Offer","priceCurrency":"USD","availability":"https://schema.org/InStock"}},
+    {"@type":"Product","name":"2000L + 4m Stand","brand":"Mr Tank Stand","offers":{"@type":"Offer","priceCurrency":"USD","availability":"https://schema.org/InStock"}},
+    {"@type":"Product","name":"5000L + 3m Stand","brand":"Mr Tank Stand","offers":{"@type":"Offer","priceCurrency":"USD","availability":"https://schema.org/InStock"}}
+   ]
+  }
+  </script>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Sticky CTA (mobile) -->
-  <div class="sticky-cta" aria-label="Quick actions">
-    <a class="btn" href="tel:+263774887686">Call: 0774 887 686</a>
-    <button class="btn dark" id="openQuoteDrawer">Get Quote</button>
-  </div>
+  <!-- Header / Nav -->
+  <header id="siteHeader" class="header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">
+        <span class="logo-dot"></span>
+        <span class="brand-text">Mr Tank Stand</span>
+      </a>
 
-  <!-- Back to top -->
-  <button id="toTop" class="to-top" aria-label="Back to top">Top</button>
-
-  <!-- Header / NAV -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">MTS</div>
-        <div>
-          <div style="font-size:1.05rem;color:var(--black)">Mr Tank Stand</div>
-          <div class="badge-blue">Payment on Delivery</div>
-        </div>
+      <!-- Social links (hidden on mobile for cleanliness) -->
+      <div class="social inline">
+        <a href="https://facebook.com/mrtankstands" target="_blank" rel="noopener" aria-label="Facebook" class="soc fb">Facebook</a>
+        <a href="https://instagram.com/mrtankstand" target="_blank" rel="noopener" aria-label="Instagram" class="soc ig">Instagram</a>
       </div>
 
-      <nav class="menu">
-        <div class="menu-links">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#quote">Quote</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#before-after">Before/After</a>
-          <a href="#extras">Bundles</a>
-          <a href="#faqs">FAQs</a>
-          <a class="btn ghost" href="./assets/price-list.pdf" download>Price List (PDF)</a>
-          <a class="btn dark" href="#contact">Get a Quote</a>
-        </div>
-        <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </button>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">☰</button>
+        <ul id="navMenu" class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link cta">Get a Quote</a></li>
+        </ul>
       </nav>
-    </div>
-    <div id="mobileMenu" class="drawer" role="dialog" aria-modal="false">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#quote">Quote</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#before-after">Before/After</a>
-      <a href="#extras">Bundles</a>
-      <a href="#faqs">FAQs</a>
-      <a href="./assets/price-list.pdf" download>Price List (PDF)</a>
-      <a href="#contact">Get a Quote</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container grid">
+  <!-- Hero -->
+  <section id="home" class="section hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Water Tanks & Stands, Done Right.</h1>
+        <p>Fabrication, installation, repairs & borehole hookups. Payment on delivery. Fast turnaround in Harare & surrounding areas.</p>
+        <div class="hero-cta">
+          <a href="#pricing" class="btn primary">Build Your Estimate</a>
+          <a href="#contact" class="btn ghost">Talk to a Human</a>
+        </div>
+        <div class="trust-badges">
+          <span>✓ Same-day installs (stock dependent)</span>
+          <span>✓ 6-month workmanship warranty</span>
+          <span>✓ Country-wide delivery</span>
+          <!-- Financing blurb (commented out for now)
+          <span>✓ Flexible payment options available</span>
+          -->
+        </div>
+      </div>
+      <div class="hero-media">
+        <img
+          src="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/mf0/ihk/f66/MrTankStandHome.png"
+          alt="Mr Tank Stand installation team at work"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="section products">
+    <div class="container">
+      <h2 class="section-title">Products & Services</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" alt="Poly water tank" loading="lazy"/>
+          <h3>Water Tanks</h3>
+          <p>500L to 10,000L. UV-stabilised, food-grade poly. We’ll help you choose the right size.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="Steel stands" loading="lazy"/>
+          <h3>Steel Stands</h3>
+          <p>Sturdy 2m–6m steel stands, primed & painted. Custom heights available on request.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Borehole hookup" loading="lazy"/>
+          <h3>Borehole Hookups</h3>
+          <p>Pumps, piping, filters & taps. Full setup so the water flows on day one.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Repairs" loading="lazy"/>
+          <h3>Repairs & Upgrades</h3>
+          <p>Stand reinforcement, tank relocation, leak fixes, ladder additions & more.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title">Recent Work</h2>
+      <div class="cards" id="gal">
+        <img src="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/mf0/ihk/f66/MrTankStandHome.png" alt="Install 1" class="gimg" loading="lazy">
+        <img src="https://af6815798a.imgdist.com/pub/bfra/knkjywkm/7en/j0x/04b/MrTankStandackGround.png" alt="Install 2" class="gimg" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop" alt="Install 3" class="gimg" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Install 4" class="gimg" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Tank Sizing Wizard -->
+  <section id="sizing" class="section">
+    <div class="container">
+      <h2 class="section-title">Tank Sizing Wizard</h2>
+      <p class="section-subtitle">Tell us your usage and backup days — we’ll recommend a size.</p>
+      <form id="sizingForm" class="estimate">
+        <div class="form-group">
+          <label for="peopleInput">Number of people</label>
+          <input id="peopleInput" type="number" min="1" value="4" />
+        </div>
+        <div class="form-group">
+          <label for="litresInput">Average litres per person per day</label>
+          <input id="litresInput" type="number" min="20" value="60" />
+        </div>
+        <div class="form-group">
+          <label for="daysInput">Days of backup you want</label>
+          <input id="daysInput" type="number" min="1" value="3" />
+        </div>
+        <div class="summary">
+          <div class="row"><span>Estimated need:</span><strong id="needLitres">0L</strong></div>
+          <div class="row"><span>Recommendation:</span><strong id="recTank">—</strong></div>
+        </div>
+        <div class="actions">
+          <button type="button" id="sizingToWA" class="btn primary">Send to WhatsApp</button>
+        </div>
+        <p class="fineprint">Rule-of-thumb. Final quote after site check.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pricing / Estimator -->
+  <section id="pricing" class="section pricing">
+    <div class="container">
+      <h2 class="section-title">Instant Estimate</h2>
+      <p class="section-subtitle">Pick a tank, pick a stand height, add delivery area — we’ll estimate your total. You can send it to WhatsApp in one tap.</p>
+
+      <form id="estimateForm" class="estimate">
+        <div class="form-group">
+          <label for="tankSelect">Tank Size</label>
+          <select id="tankSelect" required>
+            <option value="">Select a tank</option>
+            <option value="1000">1000L — $100</option>
+            <option value="2000">2000L — $170</option>
+            <option value="2500">2500L — $190</option>
+            <option value="5000">5000L — $330</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="standSelect">Stand Height</label>
+          <select id="standSelect" required>
+            <option value="">Select a stand</option>
+            <option value="3_2000">Stand 3m (for 2000L) — $220</option>
+            <option value="4_2000">Stand 4m (for 2000L) — $240</option>
+            <option value="6_2000">Stand 6m (for 2000L) — $340</option>
+            <option value="3_5000">Stand 3m (for 5000L) — $300</option>
+            <option value="4_5000">Stand 4m (for 5000L) — $350</option>
+            <option value="6_5000">Stand 6m (for 5000L) — $500</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="areaSelect">Delivery Area</label>
+          <select id="areaSelect" required>
+            <option value="">Select area</option>
+            <option value="harare">Harare (Urban) — $0</option>
+            <option value="greater">Greater Harare — $25</option>
+            <option value="regional">Regional — $60</option>
+          </select>
+        </div>
+
+        <div class="summary">
+          <div class="row"><span>Tank:</span><strong id="tankPrice">$0</strong></div>
+          <div class="row"><span>Stand:</span><strong id="standPrice">$0</strong></div>
+          <div class="row"><span>Delivery:</span><strong id="deliveryPrice">$0</strong></div>
+          <hr />
+          <div class="row total"><span>Estimated Total:</span><strong id="totalPrice">$0</strong></div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Send to WhatsApp</button>
+          <button type="button" id="resetBtn" class="btn ghost">Reset</button>
+        </div>
+        <p class="fineprint">* Estimates exclude special site works. Final quote confirmed after site check.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Packages (bundled offers) -->
+  <section id="packages" class="section packages">
+    <div class="container">
+      <h2 class="section-title">Popular Packages (Supply & Install)</h2>
+      <p class="section-subtitle">Transparent bundles. Final price confirmed after site check.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>2000L + 3m Stand</h3>
+          <ul>
+            <li>2000L tank</li><li>3m steel stand</li><li>Harare delivery</li><li>Mounting & plumbing</li>
+          </ul>
+          <a href="#contact" class="btn primary pkg-btn" data-package="2000L + 3m Stand">Request Quote</a>
+        </article>
+        <article class="card">
+          <h3>2000L + 4m Stand</h3>
+          <ul>
+            <li>2000L tank</li><li>4m steel stand</li><li>Delivery</li><li>Install & test</li>
+          </ul>
+          <a href="#contact" class="btn primary pkg-btn" data-package="2000L + 4m Stand">Request Quote</a>
+        </article>
+        <article class="card">
+          <h3>5000L + 3m Stand</h3>
+          <ul>
+            <li>5000L tank</li><li>3m steel stand</li><li>Delivery</li><li>Install & test</li>
+          </ul>
+          <a href="#contact" class="btn primary pkg-btn" data-package="5000L + 3m Stand">Request Quote</a>
+        </article>
+      </div>
+      <p class="fineprint">Need a different height? We fabricate custom stands.</p>
+      <!-- Financing blurb (commented out)
+      <p class="fineprint">Ask about flexible payment options.</p>
+      -->
+    </div>
+  </section>
+
+  <!-- Payment badges + Stock indicator -->
+  <section id="payments" class="section">
+    <div class="container">
+      <h2 class="section-title">Payment & Availability</h2>
+      <div class="chips">
+        <span class="chip">EcoCash accepted</span>
+        <span class="chip">USD cash</span>
+        <span class="chip">Bank transfer</span>
+        <span class="chip">Pay on delivery</span>
+      </div>
+      <p class="section-subtitle" id="stockBadge">Only 3 × 5000L tanks left this week — reserve now.</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section how">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <ol class="steps">
+        <li><strong>Pick</strong> your tank & stand (use the estimator).</li>
+        <li><strong>Confirm</strong> via WhatsApp or the contact form.</li>
+        <li><strong>We deliver & install</strong>. Payment on delivery.</li>
+        <li><strong>Enjoy</strong> reliable water, with a 6-month warranty.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Stand Height Visualizer (SVG version) -->
+  <section id="visualizer" class="section">
+    <div class="container">
+      <h2 class="section-title">Stand Height Visualizer</h2>
+      <p class="section-subtitle">Drag to see 3m / 4m / 6m in context.</p>
+
+      <div class="viz-wrap">
+        <div class="viz-canvas">
+          <svg class="viz-svg" viewBox="0 0 700 340" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <!-- Ground -->
+            <rect x="0" y="300" width="700" height="40" fill="#e9eef7"/>
+            <!-- House silhouette -->
+            <g opacity="0.25">
+              <rect x="60" y="200" width="180" height="100" rx="6" fill="#94a3b8"/>
+              <polygon points="60,200 150,145 240,200" fill="#94a3b8"/>
+            </g>
+
+            <!-- Height ticks -->
+            <g font-family="Poppins, sans-serif" font-size="12" fill="#6b7280">
+              <line x1="520" y1="300" x2="520" y2="40" stroke="#d1d5db" stroke-dasharray="4 6"/>
+              <text x="526" y="300">0m</text>
+              <text x="526" y="170">3m</text>
+              <text x="526" y="130">4m</text>
+              <text x="526" y="60">6m</text>
+            </g>
+
+            <!-- Stand -->
+            <rect id="stand" x="585" y="180" width="28" height="120" rx="4" fill="#3a3a3a"></rect>
+
+            <!-- Tank shadow -->
+            <ellipse id="tankShadow" cx="600" cy="175" rx="44" ry="10" fill="#000" opacity="0.06"></ellipse>
+
+            <!-- Tank -->
+            <g id="tank" transform="translate(556,145)">
+              <rect width="88" height="46" rx="12" fill="#1976ff" stroke="#1e40af" stroke-width="2"/>
+              <rect x="6" y="10" width="76" height="6" rx="3" fill="#60a5fa" opacity="0.35"/>
+            </g>
+
+            <!-- Floating label -->
+            <g id="heightLabelGroup">
+              <rect id="labelBg" x="540" y="120" width="110" height="28" rx="8" fill="#1d4ed8" opacity="0.95"></rect>
+              <text id="heightLabel" x="548" y="139" font-family="Poppins, sans-serif" font-weight="700" font-size="14" fill="#fff">6m stand</text>
+            </g>
+          </svg>
+        </div>
+        <div class="viz-controls">
+          <label for="heightSlider" class="muted">Drag to see 3m / 4m / 6m in context.</label>
+          <input id="heightSlider" type="range" min="3" max="6" step="1" value="6">
+          <p id="pressureHint" class="muted small">Approx. static head: ~58.9 kPa (8.5 PSI) at tank outlet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section faq">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <details>
+        <summary>Do you charge for delivery?</summary>
+        <p>Harare urban deliveries are free. Greater Harare and regional fees are shown in the estimator.</p>
+      </details>
+      <details>
+        <summary>Do you custom-build stands?</summary>
+        <p>Yes. Tell us your required height and base footprint — we’ll quote accordingly.</p>
+      </details>
+      <details>
+        <summary>Do you handle pumps and plumbing?</summary>
+        <p>Yes. Full borehole hookups, pumps, filters, taps — end to end.</p>
+      </details>
+      <details>
+        <summary>Payment options?</summary>
+        <p>Payment on delivery (cash, mobile money, or bank transfer).</p>
+      </details>
+      <p class="download">Full price list & care guide: <a href="assets/Tank-Care-Guide.pdf" download>Download PDF</a>. Want the quick tips? <a href="#" id="openLead">Get the free guide</a>.</p>
+    </div>
+  </section>
+
+  <!-- Price list (download/print) -->
+  <section id="pricelist" class="section">
+    <div class="container">
+      <h2 class="section-title">Price List</h2>
+      <div class="actions">
+        <button class="btn ghost" id="printPrice">Download Price List (PDF)</button>
+        <a class="btn primary" href="assets/Price-List.pdf" download>Download Branded PDF</a>
+      </div>
+      <!-- Hidden printable price table -->
+      <div id="pricePrint" style="display:none">
+        <h1>Mr Tank Stand — Price List</h1>
+        <h2>Tanks</h2>
+        <table border="1" cellpadding="6" cellspacing="0">
+          <tr><th>Size</th><th>Price (USD)</th></tr>
+          <tr><td>1000L</td><td>$100</td></tr>
+          <tr><td>2000L</td><td>$170</td></tr>
+          <tr><td>2500L</td><td>$190</td></tr>
+          <tr><td>5000L</td><td>$330</td></tr>
+        </table>
+        <h2>Stands</h2>
+        <table border="1" cellpadding="6" cellspacing="0">
+          <tr><th>Stand</th><th>Price (USD)</th></tr>
+          <tr><td>3m (for 2000L)</td><td>$220</td></tr>
+          <tr><td>4m (for 2000L)</td><td>$240</td></tr>
+          <tr><td>6m (for 2000L)</td><td>$340</td></tr>
+          <tr><td>3m (for 5000L)</td><td>$300</td></tr>
+          <tr><td>4m (for 5000L)</td><td>$350</td></tr>
+          <tr><td>6m (for 5000L)</td><td>$500</td></tr>
+        </table>
+        <p>Delivery: Harare $0 • Greater Harare $25 • Regional $60</p>
+        <p>Tel: +263 77 488 7686 • Website lead</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title">Get a Quote</h2>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nameInput">Name</label>
+            <input id="nameInput" type="text" required placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="phoneInput">Phone / WhatsApp</label>
+            <input id="phoneInput" type="tel" required placeholder="+263…" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="locInput">Location</label>
+            <input id="locInput" type="text" placeholder="Area / suburb" />
+          </div>
+          <div class="form-group">
+            <label for="msgInput">Message</label>
+            <input id="msgInput" type="text" placeholder="Tank & stand + any notes" />
+          </div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Send via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
       <div>
-        <h1 class="headline">Tank & Stand Installation — <span style="color:#a8c1ff">Free Delivery*</span></h1>
-        <p class="sub">We fabricate, install, and repair water tank stands. Fast turnaround across Zimbabwe.</p>
-        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
-          <a class="btn" href="tel:+263774887686">Call 0774 887 686</a>
-          <a class="btn dark" id="waHero" href="#" rel="noopener">WhatsApp Quote</a>
-          <a class="btn ghost" href="./assets/price-list.pdf" download>Download Price List (PDF)</a>
+        <div class="brand small">
+          <span class="logo-dot"></span>
+          <span class="brand-text">Mr Tank Stand</span>
         </div>
-        <div class="trustbar" aria-label="Trust markers">
-          <span class="pill">Engineered Bracing</span>
-          <span class="pill">Anti-rust Options</span>
-          <span class="pill">Insured Crews</span>
-          <span class="pill">Same/Next-Day Install*</span>
+        <p class="muted">© <span id="year"></span> Mr Tank Stand. All rights reserved.</p>
+      </div>
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-meta">
+        <div class="social">
+          <a href="https://facebook.com/mrtankstands" target="_blank" rel="noopener" class="soc fb">Facebook</a>
+          <a href="https://instagram.com/mrtankstand" target="_blank" rel="noopener" class="soc ig">Instagram</a>
         </div>
-      </div>
-
-      <div class="hero-card" aria-labelledby="pricing-snapshot">
-        <h2 id="pricing-snapshot" class="section-title" style="margin:.2rem 0;color:var(--blue-900)">Popular Prices</h2>
-        <div class="price-row"><span>1000L Tank</span><strong>$100</strong></div>
-        <div class="price-row"><span>2000L Tank</span><strong>$170</strong></div>
-        <div class="price-row"><span>2500L Tank</span><strong>$190</strong></div>
-        <div class="price-row"><span>5000L Tank</span><strong>$320</strong></div>
-        <div class="price-row"><span>Stand 3m (for 2000L)</span><strong>$220</strong></div>
-        <div class="price-row"><span>Stand 4m (for 2000L)</span><strong>$240</strong></div>
-        <div class="price-row"><span>Stand 6m (for 2000L)</span><strong>$340</strong></div>
-        <div class="price-row"><span>Stand 3m (for 5000L)</span><strong>$300</strong></div>
-        <div class="price-row"><span>Stand 4m (for 5000L)</span><strong>$350</strong></div>
-        <div class="price-row"><span>Stand 6m (for 5000L)</span><strong>$500</strong></div>
-        <p class="note">*Delivery radius & site access may affect availability. Final quote depends on site conditions.</p>
-        <a class="btn" href="./assets/price-list.pdf" download>Download Full Price List (PDF)</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">What we do</h2>
-      <div class="grid-cards">
-        <div class="card"><h3>Stand Fabrication</h3><p class="muted">Custom steel stands with cross-bracing, base plates and anchoring for 1000L–5000L tanks.</p></div>
-        <div class="card"><h3>Installation & Setup</h3><p class="muted">Leveling, anchoring, tank mounting, plumbing hookup and leak tests — end to end.</p></div>
-        <div class="card"><h3>Repairs & Reinforcement</h3><p class="muted">Strengthen wobbly towers, replace corroded members, add gussets & anti-rust coating.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BANNER -->
-  <section class="banner" id="why">
-    <div class="container">
-      <h2 class="section-title" style="color:#fff">Why Mr Tank Stand</h2>
-      <div class="grid-cards">
-        <div class="card"><h3>Built for Safety</h3><p>Cross-bracing, gussets and thick base plates — designed for full tanks and high winds.</p></div>
-        <div class="card"><h3>Fast Delivery</h3><p>Free delivery* around Harare. Same/next-day installs where stock & crew allow.</p></div>
-        <div class="card"><h3>Payment on Delivery</h3><p>No risky deposits. Inspect our work first, then pay.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <section id="quote">
-    <div class="container two-col">
-      <div class="card">
-        <h2 class="section-title" style="color:var(--blue-900)">Quick Price Estimator</h2>
-        <p class="muted">Select your tank size and stand height to get a ballpark figure.</p>
-        <div class="row">
-          <div class="field">
-            <label for="tankSize">Tank Size</label>
-            <select id="tankSize">
-              <option value="1000">$100 — 1000L</option>
-              <option value="2000">$170 — 2000L</option>
-              <option value="2500">$190 — 2500L</option>
-              <option value="5000">$320 — 5000L</option>
-            </select>
-            <small class="hint" id="hint-tankSize">Pick a tank size</small>
-          </div>
-          <div class="field">
-            <label for="standHeight">Stand Height</label>
-            <select id="standHeight">
-              <option value="3">3m</option>
-              <option value="4">4m</option>
-              <option value="6">6m</option>
-            </select>
-            <small class="hint" id="hint-standHeight">Choose stand height</small>
-          </div>
-        </div>
-        <div class="breakdown" id="breakdown">—</div>
-        <p class="result" id="estimate">Estimated Total: —</p>
-        <p class="muted">Estimate excludes unusual site work & long-distance travel. We’ll confirm after a quick site check or photo.</p>
-      </div>
-
-      <div class="card" id="contact">
-        <h2 class="section-title" style="color:var(--blue-900)">Request a Quote</h2>
-        <form id="quoteForm" novalidate>
-          <div class="field">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" required placeholder="Your name" autocomplete="name" />
-            <small class="hint" id="hint-name">Enter your full name</small>
-          </div>
-          <div class="field">
-            <label for="phone">Phone / WhatsApp</label>
-            <input id="phone" name="phone" required inputmode="tel" autocomplete="tel" placeholder="+263 77 488 7686" />
-            <small class="hint" id="hint-phone">Use a valid number (e.g., +263774887686)</small>
-          </div>
-          <div class="row">
-            <div class="field">
-              <label for="loc">Location</label>
-              <input id="loc" name="loc" placeholder="Suburb / Town" autocomplete="address-level2" />
-              <small class="hint" id="hint-loc">Optional, helps with delivery</small>
-            </div>
-            <div class="field">
-              <label for="tank">Tank Size</label>
-              <select id="tank" name="tank"><option>1000L</option><option>2000L</option><option>2500L</option><option>5000L</option></select>
-              <small class="hint" id="hint-tank">Pick a tank size</small>
-            </div>
-          </div>
-          <div class="row">
-            <div class="field">
-              <label for="height">Stand Height</label>
-              <select id="height" name="height"><option>3m</option><option>4m</option><option>6m</option></select>
-              <small class="hint" id="hint-height">Choose height</small>
-            </div>
-            <div class="field">
-              <label for="service">Service</label>
-              <select id="service" name="service"><option>New stand + tank</option><option>Stand only</option><option>Repair / Reinforce</option><option>Installation only</option></select>
-              <small class="hint" id="hint-service">Select service</small>
-            </div>
-          </div>
-          <input type="text" name="website" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="field">
-            <label for="msg">Extra details (optional)</label>
-            <textarea id="msg" name="msg" rows="3" placeholder="Any additional information you would like to share?"></textarea>
-            <small class="hint" id="hint-msg">Optional</small>
-          </div>
-          <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.4rem">
-            <button type="submit" class="btn">Send via WhatsApp</button>
-            <a class="btn ghost" href="tel:+263774887686">Call instead</a>
-            <a class="btn ghost" href="./assets/price-list.pdf" download>Download Price List (PDF)</a>
-          </div>
-          <p class="muted" style="margin-top:.6rem">By tapping WhatsApp, we’ll open a pre-filled message with your details.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- BEFORE / AFTER -->
-  <section id="before-after">
-    <div class="container">
-      <h2 class="section-title" style="color:var(--blue-900)">Before / After</h2>
-      <div class="ba-wrap">
-        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop" alt="Before reinforcement (placeholder)" loading="lazy">
-        <div id="afterWrap" style="position:absolute;inset:0;overflow:hidden">
-          <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1600&auto=format&fit=crop" alt="After reinforcement (placeholder)" loading="lazy">
-        </div>
-        <input id="slider" class="ba-slider" type="range" min="0" max="100" value="50" aria-label="Reveal after image">
-      </div>
-      <p class="muted" style="text-align:center;margin-top:.6rem">We’ll replace these with your real project photos tomorrow.</p>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery">
-    <div class="container">
-      <h2 class="section-title" style="color:var(--blue-900)">Recent Work</h2>
-      <div class="gallery" id="galleryGrid">
-        <div class="skel"><img data-src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Tank stand install 1"/></div>
-        <div class="skel"><img data-src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop" alt="Tank stand install 2"/></div>
-        <div class="skel"><img data-src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1200&auto=format&fit=crop" alt="Tank stand install 3"/></div>
-        <div class="skel"><img data-src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1200&auto=format&fit=crop" alt="Tank stand install 4"/></div>
-      </div>
-      <p class="muted">Tap an image to view fullscreen.</p>
-    </div>
-  </section>
-
-  <!-- EXTRAS -->
-  <section id="extras" class="extras">
-    <div class="container">
-      <div class="bundles">
-        <h2 class="section-title" style="color:var(--blue-900)">Premium Bundles</h2>
-        <p class="muted">Simple packages so you don’t juggle suppliers. Plumbing included on All-Inclusive.</p>
-
-        <div class="cards">
-          <article class="card bundle">
-            <div class="bundle-head">
-              <h3>Basic Bundle</h3>
-              <span class="badge">Most Affordable</span>
-            </div>
-            <ul class="checklist">
-              <li>Tank + Stand</li>
-              <li>Free Site Visit</li>
-              <li><strong>10-Year Structural Warranty</strong></li>
-            </ul>
-            <div class="bundle-ctas">
-              <button class="btn small" data-bundle="Basic Bundle">WhatsApp Quote</button>
-              <button class="btn small ghost to-quote">Go to Quote Form</button>
-            </div>
-          </article>
-
-          <article class="card bundle best">
-            <div class="bundle-head">
-              <h3>All-Inclusive Bundle</h3>
-              <span class="badge hot">Best Value</span>
-            </div>
-            <ul class="checklist">
-              <li>Tank + Stand + <b>Plumbing</b> (inlet/outlet & float)</li>
-              <li>Free Site Visit</li>
-              <li><strong>10-Year Structural Warranty</strong></li>
-              <li><em>No Hidden Costs — the quote is what you pay</em></li>
-            </ul>
-            <div class="bundle-ctas">
-              <button class="btn small" data-bundle="All-Inclusive Bundle">WhatsApp Quote</button>
-              <button class="btn small ghost to-quote">Go to Quote Form</button>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="process-flow">
-        <h2 class="section-title" style="color:var(--blue-900)">Your Journey</h2>
-        <ol class="steps">
-          <li><b>Request</b> a quote — WhatsApp or form</li>
-          <li><b>Free Site Visit</b> & measurements</li>
-          <li><b>Design & Final Quote</b> — no hidden costs</li>
-          <li><b>Install & Hand-Off</b> — warranty starts</li>
-        </ol>
-      </div>
-
-      <div class="card innov-card">
-        <h2 class="section-title" style="color:var(--blue-900)">Leading with Innovation</h2>
-        <ul class="innov-list">
-          <li><b>Modular “No-Foundation” Kits</b> for tight or remote sites — fast setup.</li>
-          <li><b>Coastal-grade options</b> (anti-corrosion coatings; GRP tank compatibility).</li>
-          <li><b>Engineer-Signed Designs</b> available for council/insurance.</li>
-          <li><b>Video Site Quotes</b> — quick WhatsApp video assess to save time.</li>
-        </ul>
-        <p class="muted">Ask us which innovations fit your site best — urban, rural, or industrial.</p>
-      </div>
-
-      <div class="pricing-examples">
-        <h2 class="section-title" style="color:var(--blue-900)">Live Sample Pricing</h2>
-        <div class="price-table card">
-          <div class="row head">
-            <div>Option</div><div>Includes</div><div class="right">Est. Price</div><div></div>
-          </div>
-          <div class="row">
-            <div>1000 L Basic</div>
-            <div>Tank + Stand + Free Visit</div>
-            <div class="right">$150</div>
-            <div><button class="btn small" data-bundle="1000 L Basic">WhatsApp</button></div>
-          </div>
-          <div class="row">
-            <div>2000 L + Plumbing</div>
-            <div>Tank + Stand + Plumbing + Free Visit</div>
-            <div class="right">$300</div>
-            <div><button class="btn small" data-bundle="2000 L + Plumbing">WhatsApp</button></div>
-          </div>
-          <div class="row">
-            <div>5000 L All-Inclusive</div>
-            <div>Tank + Stand + Full Plumbing</div>
-            <div class="right">$600</div>
-            <div><button class="btn small" data-bundle="5000 L All-Inclusive">WhatsApp</button></div>
-          </div>
-        </div>
-        <p class="muted" style="margin-top:.5rem">Final cost depends on site access and slab/footings — we keep it transparent.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- AREAS -->
-  <section id="areas">
-    <div class="container card" style="border:2px solid var(--blue);position:relative">
-      <h2 class="section-title" style="color:var(--blue-900)">Service Areas & Workshop</h2>
-      <p class="muted">Harare Metro • Ruwa • Chitungwiza • Norton • Surrounding districts.</p>
-
-      <div class="responsive-iframe" aria-label="Google Map">
-        <iframe title="Mr Tank Stand Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Old%20SPCA%20Building%2C%20Graniteside%2C%20Harare&output=embed"></iframe>
-        <span class="map-hint" id="mapHint" aria-hidden="true">Tap to explore</span>
-      </div>
-
-      <div class="map-actions">
-        <a class="btn small ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Old%20SPCA%20Building%2C%20Graniteside%2C%20Harare">Open in Google Maps</a>
-        <button id="openMapFs" class="btn small">Open Fullscreen Map</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQs -->
-  <section id="faqs">
-    <div class="container">
-      <h2 class="section-title" style="color:var(--blue-900)">FAQs</h2>
-      <div class="faqs">
-        <details class="faq" open>
-          <summary><span>Which height should I pick?</span></summary>
-          <div class="ans">3–4m suits most homes. 6m improves pressure and clearance; we’ll advise after a quick site check.</div>
-        </details>
-        <details class="faq">
-          <summary><span>Do you deliver tanks?</span></summary>
-          <div class="ans">Yes, free around Harare (road access permitting). We can also source and mount tanks for you.</div>
-        </details>
-        <details class="faq">
-          <summary><span>Can you fix my old stand?</span></summary>
-          <div class="ans">Usually. We inspect rust, joints and footings; we can reinforce or replace as needed.</div>
-        </details>
-        <details class="faq">
-          <summary><span>How fast can you install?</span></summary>
-          <div class="ans">Same/next-day where stock & crew allow. We’ll confirm after a site photo or quick visit.</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-        <!-- Add this inside your <footer> -->
-    <nav class="footer-nav">
-      <a href="#home">Home</a>
-      <a href="#quote">Estimator</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#extras">Extras</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container two-col" style="display:grid;grid-template-columns:1fr;gap:1rem">
-      <div>
-        <h3 style="margin:0 0 .4rem;color:#fff">Mr Tank Stand</h3>
-        <p>Tank & Stand Installation • Repairs • Delivery</p>
-        <p>16911 Old SPCA Building, Graniteside, Harare</p>
-        <p>Call/WhatsApp: <a href="tel:+263774887686">+263 77 488 7686</a></p>
-      </div>
-      <div>
-        <p><b>Hours:</b> Mon–Sat 08:00–17:30</p>
-        <p style="color:#94a3b8">© <span id="yr"></span> Mr Tank Stand. All rights reserved.</p>
+        <a href="assets/Tank-Care-Guide.pdf" download>Download Care Guide</a>
+        <a href="#contact">Request a Site Check</a>
       </div>
     </div>
   </footer>
 
-  <!-- Schema (SEO) -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Mr Tank Stand","address":{"@type":"PostalAddress","streetAddress":"16911 Old SPCA Building, Graniteside","addressLocality":"Harare","addressCountry":"ZW"},"telephone":"+263774887686","areaServed":["Harare","Ruwa","Chitungwiza","Norton"],"url":"https://example.com","openingHours":"Mo-Sa 08:00-17:30","image":"https://af6815798a.imgdist.com/pub/bfra/knkjywkm/mf0/ihk/f66/MrTankStandHome.png"}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"Which height should I pick?","acceptedAnswer":{"@type":"Answer","text":"3–4m suits most homes. 6m = better pressure and clearance; we’ll advise after a site check."}},
-    {"@type":"Question","name":"Do you deliver tanks?","acceptedAnswer":{"@type":"Answer","text":"Yes, free around Harare (road access permitting). We can also source and mount tanks for you."}},
-    {"@type":"Question","name":"Can you fix my old stand?","acceptedAnswer":{"@type":"Answer","text":"Usually. We inspect rust, joints and footings; we can reinforce or replace as needed."}}
-  ]}
-  </script>
+  <!-- Floating WhatsApp & To Top -->
+  <a id="whatsFloat" class="whats-float" href="#" aria-label="WhatsApp Chat">WhatsApp Us</a>
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
 
-  <!-- Scripts -->
-  <script src="./js/main.js"></script>
+  <!-- Mobile sticky CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="tel:+263774887686" class="btn ghost">Call</a>
+    <a id="stickyWhats" class="btn primary" href="#">WhatsApp</a>
+  </div>
+
+  <!-- Desktop fixed CTA (bottom-right) -->
+  <a id="fixedQuote" class="fixed-quote" href="#contact" aria-label="Request Quote">Request Quote</a>
+
+  <!-- Lead Magnet Modal -->
+  <div id="leadModal" class="lead-modal" aria-hidden="true">
+    <div class="lead-card">
+      <h3>Free Water Storage Guide</h3>
+      <p>Get our quick tips on placement, maintenance, and pressure.</p>
+      <div class="actions">
+        <a href="#" id="leadWhats" class="btn primary">Send via WhatsApp</a>
+        <button id="leadClose" class="btn ghost" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 360° Viewer placeholder (add assets later) -->
+  <!--
+  <section id="viewer360" class="section">
+    <div class="container">
+      <h2 class="section-title">360° Stand Viewer</h2>
+      <div class="spin-wrap">
+        <img id="spinImg" alt="360° stand view" draggable="false" />
+      </div>
+      <p class="muted small">Drag left/right to rotate.</p>
+    </div>
+  </section>
+  -->
+
+  <script src="js/main.js"></script>
 </body>
 </html>
